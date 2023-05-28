@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-3">
+           <input type="text" [(ngModel)]="hero.name" placeholder="hero name" class="form-control">
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="hero power" [(ngModel)]="hero.power" class="form-control">
+         </div>
+         <div class="col-3">
+            <input type="text" placeholder="url image"  [(ngModel)]="hero.image" class="form-control">
+         </div>
+         <div class="col-3">
+           <button class="btn w-100" (click)="add()" >create hero</button>
+         </div>
+    </div>
+</div>
+<app-home></app-home>

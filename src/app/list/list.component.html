@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <div class="row">
+     <div class="col-3 my-2"  *ngFor="let item of heros">
+        <div class="card p-1" [ngClass]="{'card p-1':true,'p1':item.power>20,'p2':item.power<=20}">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> <strong>name:</strong> {{item.name}} </h5>
+              <p class="card-text"><strong>age: </strong>{{item.power}} </p>
+              <div class="d-grid gap-2">
+                <button class="btn btn-warning" [routerLink]="['/update',item._id]" type="button">update</button>
+                <button class="btn btn-danger" (click)="delete(item._id)" type="button">delete</button>
+              </div>
+
+            </div>
+          </div>
+     </div>
+
+        </div>
+</div>
